@@ -15,6 +15,6 @@ input_file = csv.DictReader(file)
 def ec2_instance(input_file): #a method
     for row in input_file:
         if 'EC2 Instance' in row['Resource type']:
-            #print(row['ID'])
+            print(row['ID'])
 
  request.post(os.getenv('CEREBROURL'),ec2_id=ec2_instance(input_file))
