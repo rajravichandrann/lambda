@@ -17,4 +17,4 @@ def ec2_instance(input_file): #a method
         if 'EC2 Instance' in row['Resource type']:
             print(row['ID'])
 
- request.post(os.getenv('CEREBROURL'),ec2_id=ec2_instance(input_file))
+ requests.post(os.getenv('CEREBROURL'),ec2_id=ec2_instance(input_file))
