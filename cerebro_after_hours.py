@@ -2,6 +2,7 @@ import csv
 import boto3
 import os
 import requests
+CEREBROURL = https://hqoavvo1ii.execute-api.us-west-2.amazonaws.com/Prod/api/v1/after_hours
 #S3 resource
 def lambda_handler(event, context): 
     s3 = boto3.client('s3')
@@ -17,4 +18,4 @@ def ec2_instance(input_file): #a method
         if 'EC2 Instance' in row['Resource type']:
             print(row['ID'])
 
- requests.post(os.getenv('CEREBROURL'),ec2_id=ec2_instance(input_file))
+ requests.post('CEREBROURL',instance_id=ec2_instance(input_file))
