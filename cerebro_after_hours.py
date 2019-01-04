@@ -2,7 +2,7 @@ import csv
 import boto3
 import os
 import requests
-CEREBROURL = https://hqoavvo1ii.execute-api.us-west-2.amazonaws.com/Prod/api/v1/after_hours
+CEREBROURL = 
 #S3 resource
 def lambda_handler(event, context): 
     s3 = boto3.client('s3')
